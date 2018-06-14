@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="popup.css" />
+	<style>
+	.item {
+		width: 260px;
+		height: 260px;
+		margin: 2px;
+		display: inline-block;
+	}
+
+	.item img {
+		max-width: 100%;
+	}
+
+	.red { background: red; }
+	.green { background: green; }
+	.blue { background: blue; }
+
+	.selected {
+		background: blue;
+		color: white;
+	}
+
+	/**** Isotope Filtering ****/
+
+	.isotope-item {
+		z-index: 2;
+	}
+
+	.isotope-hidden.isotope-item {
+		pointer-events: none;
+		z-index: 1;
+	}
+
+	/**** Isotope CSS3 transitions ****/
+
+	.isotope,
+	.isotope .isotope-item {
+		-webkit-transition-duration: 1.1s;
+		-moz-transition-duration: 1.1s;
+		transition-duration: 1.1s;
+	}
+
+	.isotope {
+		-webkit-transition-property: height, width;
+		-moz-transition-property: height, width;
+		transition-property: height, width;
+	}
+
+	.isotope .isotope-item {
+		-webkit-transition-property: -webkit-transform, opacity;
+		-moz-transition-property:    -moz-transform, opacity;
+		transition-property:         transform, opacity;
+	}
+</style>
+</head>
+<body>
+	
+
+
+
+	<ul id="filters">
+		<li><a href="#" data-filter="*">show all</a></li>
+		<li><a href="#" data-filter=".red" class="selected">red</a></li>
+		<li><a href="#" data-filter=".green">green</a></li>
+		<li><a href="#" data-filter=".blue">blue</a></li>
+		<li><a href="#" data-filter=".green, .blue">green and blue</a></li>
+	</ul>
+
+	<div id="isotop-container">
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item red">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item blue">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item green">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item red">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item blue">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item green">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item red">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item blue">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item green">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item red">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item blue">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item green">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item red">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item blue">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item green">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item red">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item blue">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+		
+		<a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" class="item green">
+			<img  src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"  alt="Image description" />
+		</a>
+
+	</div>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="isotop.min.js"></script>
+	<script src="popup.js"></script>
+	
+	<script>
+		$(function(){
+			var $isotopcontainer = $('#isotop-container'),
+			$filterLinks = $('#filters a');
+
+			$isotopcontainer.isotope({
+				itemSelector: '.item',
+				filter: '.red'
+			});
+
+			setTimeout(function(){
+				$(".isotope-item.isotope-hidden").removeAttr("data-fancybox");
+				$(".isotope-item:not(.isotope-hidden)").attr("data-fancybox","gallery");
+			},50);
+
+			$filterLinks.click(function(){
+				var $this = $(this);
+				if ( $this.hasClass('selected') ) {
+					return;
+				}
+				$filterLinks.filter('.selected').removeClass('selected');
+
+				$this.addClass('selected');
+				selector = $this.data('filter');
+				$isotopcontainer.isotope({
+					filter: selector
+				});
+
+				setTimeout(function(){
+					$(".isotope-item.isotope-hidden").removeAttr("data-fancybox");
+					$(".isotope-item:not(.isotope-hidden)").attr("data-fancybox","gallery");
+				},50);
+				
+			});
+
+		});
+	</script>
+</body>
+</html>
